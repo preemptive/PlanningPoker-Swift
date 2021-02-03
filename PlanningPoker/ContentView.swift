@@ -38,13 +38,14 @@ struct ContentView: View {
                     }
                }
 
-        Picker("Bid Style", selection: $bidStyle) {
+        Picker("Bid Style", selection: $bidStyle.onChange(changeBidStyle)) {
             ForEach(BidStyle.allCases) { bidStyle in
-                Text(bidStyle.rawValue.capitalized)
+                Text(bidStyle.rawValue.capitalized).tag(bidStyle)
             }
-        }
+        }.pickerStyle(SegmentedPickerStyle())
+        
         Text("\(options[Int(bidIndex)])")
-            .font(.system(size: 180))
+            .font(.system(size: 500))
             .foregroundColor(isEditing ? .red : .black)
             .gesture(drag)
 
@@ -60,6 +61,26 @@ struct ContentView: View {
         {
             Text("missing?")    
         }
+    }
+    
+    private func changeBidStyle(_ bidStylex: BidStyle) {
+        switch bidStylex {
+        case .fibonacci: options = ContentView.fibonacci
+        case .primes: options = ContentView.primes
+        case .squares: options = ContentView.squares
+        case .linear: options = ContentView.linear
+        }
+    }
+}
+
+extension Binding {
+    func onChange(_ handler: @escaping (Value) -> Void) -> Binding<Value> {
+        return Binding(
+            get: { self.wrappedValue },
+            set: { selection in
+                self.wrappedValue = selection
+                handler(selection)
+        })
     }
 }
 
