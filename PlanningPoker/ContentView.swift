@@ -38,29 +38,35 @@ struct ContentView: View {
                     }
                }
 
-        Picker("Bid Style", selection: $bidStyle.onChange(changeBidStyle)) {
-            ForEach(BidStyle.allCases) { bidStyle in
-                Text(bidStyle.rawValue.capitalized).tag(bidStyle)
-            }
-        }.pickerStyle(SegmentedPickerStyle())
-        
-        Text("\(options[Int(bidIndex)])")
-            .font(.system(size: 500))
-            .foregroundColor(isEditing ? .red : .black)
-            .gesture(drag)
+        GeometryReader { geo in
+            VStack(spacing: 0.0) {
+                Picker("Bid Style", selection: $bidStyle.onChange(changeBidStyle)) {
+                    ForEach(BidStyle.allCases) { bidStyle in
+                        Text(bidStyle.rawValue.capitalized).tag(bidStyle)
+                    }
+                }.pickerStyle(SegmentedPickerStyle())
+            
+                Text("\(options[Int(bidIndex)])")
+                    .font(.system(size: min(geo.size.height, geo.size.width) * 0.8))
+                    .lineLimit(1)
+                    .foregroundColor(isEditing ? .red : .black)
+                    .gesture(drag)
 
-        Slider(
-            value: $bidIndex,
-            in: 0...Float((options.count-1)),
-            step: 1,
-            onEditingChanged: { editing in
-                isEditing = editing
-            },
-            minimumValueLabel: Text(options[0]),
-            maximumValueLabel: Text(options[options.count - 1]))
-        {
-            Text("missing?")    
+                Slider(
+                    value: $bidIndex,
+                    in: 0...Float((options.count-1)),
+                    step: 1,
+                    onEditingChanged: { editing in
+                        isEditing = editing
+                    },
+                    minimumValueLabel: Text(options[0]),
+                    maximumValueLabel: Text(options[options.count - 1]))
+                {
+                    Text("missing?")
+                }
+            }
         }
+        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
     
     private func changeBidStyle(_ bidStylex: BidStyle) {
