@@ -45,13 +45,18 @@ struct ContentView: View {
                         Text(bidStyle.rawValue.capitalized).tag(bidStyle)
                     }
                 }.pickerStyle(SegmentedPickerStyle())
-            
+
+                Spacer()
+
+                // Seems like 0.8 gives nice large numbers, but won't make "55" change to "...".
                 Text("\(options[Int(bidIndex)])")
                     .font(.system(size: min(geo.size.height, geo.size.width) * 0.8))
                     .lineLimit(1)
                     .foregroundColor(isEditing ? .red : .black)
                     .gesture(drag)
 
+                Spacer()
+                
                 Slider(
                     value: $bidIndex,
                     in: 0...Float((options.count-1)),
@@ -62,7 +67,7 @@ struct ContentView: View {
                     minimumValueLabel: Text(options[0]),
                     maximumValueLabel: Text(options[options.count - 1]))
                 {
-                    Text("missing?")
+                    Text("Bid")
                 }
             }
         }
