@@ -31,6 +31,8 @@ struct ContentView: View {
     @State private var isEditing: Bool = false
     @State private var bidStyle = BidStyle.fibonacci
     @State private var options: Array<String> = getOptions(fibonacci)
+    @State private var showAlert = false
+    @State private var alertState: String? = nil
 
     var body: some View {
         let drag = DragGesture()
@@ -60,6 +62,12 @@ struct ContentView: View {
                     .gesture(drag)
 
                 Spacer()
+                    .alert(isPresented: $showAlert) {
+                        Alert(
+                            title: Text("Jailbroken"),
+                            message: Text("Device or simulator hosting app " + alertState!)
+                        )
+                    }
                 
                 Slider(
                     value: $bidIndex,
@@ -76,6 +84,23 @@ struct ContentView: View {
             }
         }
         .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+        .onAppear(perform: checkForJailbroken)
+    }
+    
+    private func checkForJailbroken() {
+        var state: String? = nil
+        if AppHost.isJailbreakActive() {
+            state = "is Actively Jailbroken"
+        } else if AppHost.isJailbroken() {
+            state = "is Jailbroken"
+        } else if AppHost.hasBeenJailbroken() {
+            state = "has been Jailbroken before"
+        }
+        
+        if let theState = state {
+            alertState = theState
+            showAlert = true
+        }
     }
     
     private func changeBidStyle(_ bidStylex: BidStyle) {
