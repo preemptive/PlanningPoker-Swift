@@ -18,11 +18,14 @@ struct ContentView: View {
         var id: String { self.rawValue }
     }
     
+    // For now each bid style has 12 options:
     static let fibonacci = ["0", "1", "2", "3", "5", "8", "13", "21", "34", "55", "∞", "?"]
     static let squares = ["0", "1", "4", "9", "16", "25", "36", "49", "64", "81", "∞", "?"]
     static let primes = ["2", "3", "5", "7", "11", "13", "17", "19", "23", "29", "∞", "?"]
     static let linear = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "∞", "?"]
-    
+
+    static let dragThreshold: CGFloat = 25
+
     @State private var bidIndex: Float = 1
     @State private var isEditing: Bool = false
     @State private var bidStyle = BidStyle.fibonacci
@@ -31,10 +34,10 @@ struct ContentView: View {
     var body: some View {
         let drag = DragGesture()
                 .onEnded {
-                    if $0.translation.width < -30 {
-                        bidIndex = Float(max(Int(bidIndex) - 1, 0))
-                    } else if $0.translation.width > 30 {
+                    if $0.translation.width < -ContentView.dragThreshold {
                         bidIndex = Float(min(Int(bidIndex) + 1, options.count - 1))
+                    } else if $0.translation.width > ContentView.dragThreshold {
+                        bidIndex = Float(max(Int(bidIndex) - 1, 0))
                     }
                }
 
