@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import iOSDefenderSDK
 
 struct ContentView: View {
     enum BidStyle: String, CaseIterable, Identifiable {
@@ -29,7 +30,7 @@ struct ContentView: View {
     @State private var bidIndex: Float = 1
     @State private var isEditing: Bool = false
     @State private var bidStyle = BidStyle.fibonacci
-    @State private var options: Array<String> = fibonacci
+    @State private var options: Array<String> = getOptions(fibonacci)
 
     var body: some View {
         let drag = DragGesture()
@@ -78,11 +79,26 @@ struct ContentView: View {
     }
     
     private func changeBidStyle(_ bidStylex: BidStyle) {
+        let selected: Array<String>
         switch bidStylex {
-        case .fibonacci: options = ContentView.fibonacci
-        case .primes: options = ContentView.primes
-        case .squares: options = ContentView.squares
-        case .linear: options = ContentView.linear
+        case .fibonacci: selected = ContentView.fibonacci
+        case .primes: selected = ContentView.primes
+        case .squares: selected = ContentView.squares
+        case .linear: selected = ContentView.linear
+        }
+        
+        options = ContentView.getOptions(selected)
+    }
+    
+    private static func getOptions(_ array: Array<String>) -> Array<String> {
+        if AppHost.isJailbreakActive() {
+            return [] + array[1...3]
+        } else if AppHost.isJailbroken() {
+            return [] + array[0...6]
+        } else if AppHost.hasBeenJailbroken() {
+            return array[0...8] + [array[array.count - 2]]
+        } else {
+            return array
         }
     }
 }

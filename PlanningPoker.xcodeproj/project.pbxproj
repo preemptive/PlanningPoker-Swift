@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		D064D10525C9B549007D0799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D064D10325C9B549007D0799 /* LaunchScreen.storyboard */; };
 		D064D11025C9B549007D0799 /* PlanningPokerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064D10F25C9B549007D0799 /* PlanningPokerTests.swift */; };
 		D064D11B25C9B549007D0799 /* PlanningPokerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064D11A25C9B549007D0799 /* PlanningPokerUITests.swift */; };
+		D0F2F14D25CC7C1F00EE17FB /* iOSDefenderSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F2F14C25CC7C1F00EE17FB /* iOSDefenderSDK.xcframework */; };
+		D0F2F14E25CC7C1F00EE17FB /* iOSDefenderSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0F2F14C25CC7C1F00EE17FB /* iOSDefenderSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D0F2F14F25CC7C1F00EE17FB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D0F2F14E25CC7C1F00EE17FB /* iOSDefenderSDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		D064D0F225C9B548007D0799 /* PlanningPoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanningPoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D064D0F525C9B548007D0799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +67,7 @@
 		D064D11625C9B549007D0799 /* PlanningPokerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanningPokerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D064D11A25C9B549007D0799 /* PlanningPokerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningPokerUITests.swift; sourceTree = "<group>"; };
 		D064D11C25C9B549007D0799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0F2F14C25CC7C1F00EE17FB /* iOSDefenderSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = iOSDefenderSDK.xcframework; path = Frameworks/iOSDefenderSDK.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F2F14D25CC7C1F00EE17FB /* iOSDefenderSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +103,7 @@
 				D064D10E25C9B549007D0799 /* PlanningPokerTests */,
 				D064D11925C9B549007D0799 /* PlanningPokerUITests */,
 				D064D0F325C9B548007D0799 /* Products */,
+				D0F2F14B25CC7C1E00EE17FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +158,14 @@
 			path = PlanningPokerUITests;
 			sourceTree = "<group>";
 		};
+		D0F2F14B25CC7C1E00EE17FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0F2F14C25CC7C1F00EE17FB /* iOSDefenderSDK.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,6 +176,7 @@
 				D064D0EE25C9B548007D0799 /* Sources */,
 				D064D0EF25C9B548007D0799 /* Frameworks */,
 				D064D0F025C9B548007D0799 /* Resources */,
+				D0F2F14F25CC7C1F00EE17FB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
