@@ -34,6 +34,10 @@ The slider at the bottom will show the range of values available.
 When the app is started, an alert is shown indicating that the device is jailbroken and which of the API methods returned true.
 The alert also indicates how the functionality is limited.
 
-*iOSDefenderSDK* is a trademark of PreEmptive Solutions, LLC.
-Xcode is a trademark of Apple Inc., registered in the U.S. and other countries.
-Other trademarks are the property of their respective owners.
+## Troubleshooting
+
+If you encounter issues with *iOSDefenderSDK* or this sample project, please contact our support team at: support@preemptive.com.
+
+* *iOSDefenderSDK* is a trademark of PreEmptive Solutions, LLC.
+* Xcode is a trademark of Apple Inc., registered in the U.S. and other countries.
+* Other trademarks are the property of their respective owners.
