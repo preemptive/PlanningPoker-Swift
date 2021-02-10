@@ -14,28 +14,9 @@
 		D064D0FF25C9B549007D0799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D064D0FE25C9B549007D0799 /* Assets.xcassets */; };
 		D064D10225C9B549007D0799 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D064D10125C9B549007D0799 /* Preview Assets.xcassets */; };
 		D064D10525C9B549007D0799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D064D10325C9B549007D0799 /* LaunchScreen.storyboard */; };
-		D064D11025C9B549007D0799 /* PlanningPokerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064D10F25C9B549007D0799 /* PlanningPokerTests.swift */; };
-		D064D11B25C9B549007D0799 /* PlanningPokerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064D11A25C9B549007D0799 /* PlanningPokerUITests.swift */; };
 		D0F2F14D25CC7C1F00EE17FB /* iOSDefenderSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F2F14C25CC7C1F00EE17FB /* iOSDefenderSDK.xcframework */; };
 		D0F2F14E25CC7C1F00EE17FB /* iOSDefenderSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0F2F14C25CC7C1F00EE17FB /* iOSDefenderSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D064D10C25C9B549007D0799 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D064D0EA25C9B547007D0799 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D064D0F125C9B548007D0799;
-			remoteInfo = PlanningPoker;
-		};
-		D064D11725C9B549007D0799 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D064D0EA25C9B547007D0799 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D064D0F125C9B548007D0799;
-			remoteInfo = PlanningPoker;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		D0F2F14F25CC7C1F00EE17FB /* Embed Frameworks */ = {
@@ -61,12 +42,6 @@
 		D064D10125C9B549007D0799 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D064D10425C9B549007D0799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D064D10625C9B549007D0799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D064D10B25C9B549007D0799 /* PlanningPokerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanningPokerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D064D10F25C9B549007D0799 /* PlanningPokerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningPokerTests.swift; sourceTree = "<group>"; };
-		D064D11125C9B549007D0799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D064D11625C9B549007D0799 /* PlanningPokerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanningPokerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D064D11A25C9B549007D0799 /* PlanningPokerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningPokerUITests.swift; sourceTree = "<group>"; };
-		D064D11C25C9B549007D0799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0F2F14C25CC7C1F00EE17FB /* iOSDefenderSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = iOSDefenderSDK.xcframework; path = Frameworks/iOSDefenderSDK.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,20 +54,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D064D10825C9B549007D0799 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D064D11325C9B549007D0799 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -100,8 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				D064D0F425C9B548007D0799 /* PlanningPoker */,
-				D064D10E25C9B549007D0799 /* PlanningPokerTests */,
-				D064D11925C9B549007D0799 /* PlanningPokerUITests */,
 				D064D0F325C9B548007D0799 /* Products */,
 				D0F2F14B25CC7C1E00EE17FB /* Frameworks */,
 			);
@@ -111,8 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				D064D0F225C9B548007D0799 /* PlanningPoker.app */,
-				D064D10B25C9B549007D0799 /* PlanningPokerTests.xctest */,
-				D064D11625C9B549007D0799 /* PlanningPokerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,24 +95,6 @@
 				D064D10125C9B549007D0799 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		D064D10E25C9B549007D0799 /* PlanningPokerTests */ = {
-			isa = PBXGroup;
-			children = (
-				D064D10F25C9B549007D0799 /* PlanningPokerTests.swift */,
-				D064D11125C9B549007D0799 /* Info.plist */,
-			);
-			path = PlanningPokerTests;
-			sourceTree = "<group>";
-		};
-		D064D11925C9B549007D0799 /* PlanningPokerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D064D11A25C9B549007D0799 /* PlanningPokerUITests.swift */,
-				D064D11C25C9B549007D0799 /* Info.plist */,
-			);
-			path = PlanningPokerUITests;
 			sourceTree = "<group>";
 		};
 		D0F2F14B25CC7C1E00EE17FB /* Frameworks */ = {
@@ -187,42 +126,6 @@
 			productReference = D064D0F225C9B548007D0799 /* PlanningPoker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D064D10A25C9B549007D0799 /* PlanningPokerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D064D12225C9B549007D0799 /* Build configuration list for PBXNativeTarget "PlanningPokerTests" */;
-			buildPhases = (
-				D064D10725C9B549007D0799 /* Sources */,
-				D064D10825C9B549007D0799 /* Frameworks */,
-				D064D10925C9B549007D0799 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D064D10D25C9B549007D0799 /* PBXTargetDependency */,
-			);
-			name = PlanningPokerTests;
-			productName = PlanningPokerTests;
-			productReference = D064D10B25C9B549007D0799 /* PlanningPokerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		D064D11525C9B549007D0799 /* PlanningPokerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D064D12525C9B549007D0799 /* Build configuration list for PBXNativeTarget "PlanningPokerUITests" */;
-			buildPhases = (
-				D064D11225C9B549007D0799 /* Sources */,
-				D064D11325C9B549007D0799 /* Frameworks */,
-				D064D11425C9B549007D0799 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D064D11825C9B549007D0799 /* PBXTargetDependency */,
-			);
-			name = PlanningPokerUITests;
-			productName = PlanningPokerUITests;
-			productReference = D064D11625C9B549007D0799 /* PlanningPokerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -235,14 +138,6 @@
 				TargetAttributes = {
 					D064D0F125C9B548007D0799 = {
 						CreatedOnToolsVersion = 11.4.1;
-					};
-					D064D10A25C9B549007D0799 = {
-						CreatedOnToolsVersion = 11.4.1;
-						TestTargetID = D064D0F125C9B548007D0799;
-					};
-					D064D11525C9B549007D0799 = {
-						CreatedOnToolsVersion = 11.4.1;
-						TestTargetID = D064D0F125C9B548007D0799;
 					};
 				};
 			};
@@ -260,8 +155,6 @@
 			projectRoot = "";
 			targets = (
 				D064D0F125C9B548007D0799 /* PlanningPoker */,
-				D064D10A25C9B549007D0799 /* PlanningPokerTests */,
-				D064D11525C9B549007D0799 /* PlanningPokerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -274,20 +167,6 @@
 				D064D10525C9B549007D0799 /* LaunchScreen.storyboard in Resources */,
 				D064D10225C9B549007D0799 /* Preview Assets.xcassets in Resources */,
 				D064D0FF25C9B549007D0799 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D064D10925C9B549007D0799 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D064D11425C9B549007D0799 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,36 +184,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D064D10725C9B549007D0799 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D064D11025C9B549007D0799 /* PlanningPokerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D064D11225C9B549007D0799 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D064D11B25C9B549007D0799 /* PlanningPokerUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D064D10D25C9B549007D0799 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D064D0F125C9B548007D0799 /* PlanningPoker */;
-			targetProxy = D064D10C25C9B549007D0799 /* PBXContainerItemProxy */;
-		};
-		D064D11825C9B549007D0799 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D064D0F125C9B548007D0799 /* PlanningPoker */;
-			targetProxy = D064D11725C9B549007D0799 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D064D10325C9B549007D0799 /* LaunchScreen.storyboard */ = {
@@ -506,90 +356,6 @@
 			};
 			name = Release;
 		};
-		D064D12325C9B549007D0799 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7RYWC3D7HS;
-				INFOPLIST_FILE = PlanningPokerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.preemptive.PlanningPokerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlanningPoker.app/PlanningPoker";
-			};
-			name = Debug;
-		};
-		D064D12425C9B549007D0799 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7RYWC3D7HS;
-				INFOPLIST_FILE = PlanningPokerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.preemptive.PlanningPokerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlanningPoker.app/PlanningPoker";
-			};
-			name = Release;
-		};
-		D064D12625C9B549007D0799 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7RYWC3D7HS;
-				INFOPLIST_FILE = PlanningPokerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.preemptive.PlanningPokerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PlanningPoker;
-			};
-			name = Debug;
-		};
-		D064D12725C9B549007D0799 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7RYWC3D7HS;
-				INFOPLIST_FILE = PlanningPokerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.preemptive.PlanningPokerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PlanningPoker;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -607,24 +373,6 @@
 			buildConfigurations = (
 				D064D12025C9B549007D0799 /* Debug */,
 				D064D12125C9B549007D0799 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D064D12225C9B549007D0799 /* Build configuration list for PBXNativeTarget "PlanningPokerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D064D12325C9B549007D0799 /* Debug */,
-				D064D12425C9B549007D0799 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D064D12525C9B549007D0799 /* Build configuration list for PBXNativeTarget "PlanningPokerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D064D12625C9B549007D0799 /* Debug */,
-				D064D12725C9B549007D0799 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
