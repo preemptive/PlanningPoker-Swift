@@ -2,7 +2,6 @@
 //  ContentView.swift
 //  PlanningPoker
 //
-//  Created by Mike Richter on 2/2/21.
 //  Copyright © 2021 PreEmptive Solutions, LLC. All rights reserved.
 //
 
@@ -28,11 +27,10 @@ struct ContentView: View {
     static let dragThreshold: CGFloat = 25
 
     @State private var bidIndex: Float = 1
-    @State private var isEditing: Bool = false
     @State private var bidStyle = BidStyle.fibonacci
     @State private var options: Array<String> = getOptions(fibonacci)
     @State private var showAlert = false
-    @State private var alertState: String? = nil
+    @State private var alertDescription: String? = nil
 
     var body: some View {
         let drag = DragGesture()
@@ -58,14 +56,13 @@ struct ContentView: View {
                 Text("\(options[Int(bidIndex)])")
                     .font(.system(size: min(geo.size.height, geo.size.width) * 0.8))
                     .lineLimit(1)
-                    .foregroundColor(isEditing ? .red : .black)
                     .gesture(drag)
 
                 Spacer()
                     .alert(isPresented: $showAlert) {
                         Alert(
                             title: Text("Jailbroken"),
-                            message: Text("Device or simulator hosting app " + alertState!)
+                            message: Text(alertDescription!)
                         )
                     }
                 
@@ -73,9 +70,6 @@ struct ContentView: View {
                     value: $bidIndex,
                     in: 0...Float((options.count-1)),
                     step: 1,
-                    onEditingChanged: { editing in
-                        isEditing = editing
-                    },
                     minimumValueLabel: Text(options[0]),
                     maximumValueLabel: Text(options[options.count - 1]))
                 {
@@ -90,15 +84,15 @@ struct ContentView: View {
     private func checkForJailbroken() {
         var state: String? = nil
         if AppHost.isActivelyJailbroken() {
-            state = "is Actively Jailbroken"
+            state = "Device is Actively Jailbroken, functionality is limited: only 3 different bids are available"
         } else if AppHost.isJailbroken() {
-            state = "is Jailbroken"
+            state = "Device is Jailbroken, functionality is limited: only 5 different bids are available"
         } else if AppHost.hasBeenJailbroken() {
-            state = "has been Jailbroken before"
+            state = "Device has been Jailbroken before, funtionality is limited: only 7 integer bids and infinity are available"
         }
         
         if let theState = state {
-            alertState = theState
+            alertDescription = theState
             showAlert = true
         }
     }
@@ -119,9 +113,9 @@ struct ContentView: View {
         if AppHost.isActivelyJailbroken() {
             return [] + array[1...3]
         } else if AppHost.isJailbroken() {
-            return [] + array[0...6]
+            return [] + array[0...4]
         } else if AppHost.hasBeenJailbroken() {
-            return array[0...8] + [array[array.count - 2]]
+            return array[0...6] + [array[array.count - 2]]
         } else {
             return array
         }

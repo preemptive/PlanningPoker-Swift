@@ -2,7 +2,6 @@
 //  SceneDelegate.swift
 //  PlanningPoker
 //
-//  Created by Mike Richter on 2/2/21.
 //  Copyright © 2021 PreEmptive Solutions, LLC. All rights reserved.
 //
 
