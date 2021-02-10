@@ -15,7 +15,7 @@ Cards for infinity and a question mark are also available, these are "to the rig
 ## Requirements
 
 * *iOSDefenderSDK* (requires a license: please contact sales@preemptive.com for more information)
-* Xcode 12
+* Xcode 11 or later
 * An iOS device with iOS 13.0 or later
 * Video conferencing software or a face mask (for showing your bids to your teammates)
 
@@ -33,3 +33,10 @@ When the app is running on a jailbroken device or in the Simulator the functiona
 The slider at the bottom will show the range of values available.
 When the app is started, an alert is shown indicating that the device is jailbroken and which of the API methods returned true.
 The alert also indicates how the functionality is limited.
+
+## Troubleshooting
+
+If you encounter issues with *iOSDefenderSDK* or this sample project, please contact our support team at: support@preemptive.com.
+
+* Xcode is a trademark of Apple Inc., registered in the U.S. and other countries.
+* Other trademarks are the property of their respective owners.
