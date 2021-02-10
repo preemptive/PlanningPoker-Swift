@@ -89,7 +89,7 @@ struct ContentView: View {
     
     private func checkForJailbroken() {
         var state: String? = nil
-        if AppHost.isJailbreakActive() {
+        if AppHost.isActivelyJailbroken() {
             state = "is Actively Jailbroken"
         } else if AppHost.isJailbroken() {
             state = "is Jailbroken"
@@ -116,7 +116,7 @@ struct ContentView: View {
     }
     
     private static func getOptions(_ array: Array<String>) -> Array<String> {
-        if AppHost.isJailbreakActive() {
+        if AppHost.isActivelyJailbroken() {
             return [] + array[1...3]
         } else if AppHost.isJailbroken() {
             return [] + array[0...6]
