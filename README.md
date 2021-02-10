@@ -1,30 +1,31 @@
 Fibonacci Planning Poker
 ========================
 
-This is a sample project demonstrating use of *iOSDefenderSDK*.
-*iOSDefenderSDK* is a Runtime Application Self-Protection (RASP) library for iOS projects using Swift, Objective-C, or some combination thereof.
+*Fibonacci Planning Poker* is a sample project demonstrating use of *iOSDefenderSDK*.
+*iOSDefenderSDK* is a Runtime Application Self-Protection (RASP) library for iOS projects using Swift or Objective-C.
 
-The app is a very simple tool for bidding during agile planning poker.
+The app is a very simple tool for bidding during planning in agile development processes.
 The app displays different numbered cards and these can be switched between by using the slider at the bottom of the screen or by swiping left or right.
 Once you select your bid you can hold up your device to show it to your teammates.
 
 You can select between different bidding styles by tapping the options in the picker at the top.
 Current options are Fibonacci numbers, prime numbers, squares, or just a linear progression.
-Above the highest valued cards are cards for infinity and a question mark for totally unknown.
+Cards for infinity and a question mark are also available, these are "to the right" of the highest integer bids.
 
 ## Requirements
 
+* *iOSDefenderSDK* (requires a license: please contact sales@preemptive.com for more information)
 * Xcode 12
-* (Optional) An iOS device with iOS 13.0 or later
+* An iOS device with iOS 13.0 or later
 * Video conferencing software or a face mask (for showing your bids to your teammates)
 
 ## Setting Up
 
-Setting up this sample project is very easy:
+Setting up this project is very easy:
 
 1. Copy `iOSDefenderSDK.xcframework` from the *iOSDefenderSDK* distribution to the `Frameworks/` directory.
 
-You should now be able to build and run the sample project.
+You should now be able to build and run the project.
 
 ## Behavior
 
