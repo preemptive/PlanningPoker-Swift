@@ -36,7 +36,7 @@ The alert also indicates how the functionality is limited.
 
 ## Troubleshooting
 
-If you encounter issues with *iOSDefenderSDK* or this sample project, please contact our support team at: support@preemptive.com.
+If you encounter issues with *iOSDefenderSDK* or this sample project, please [contact support](https://www.preemptive.com/contact/supportrequestform) for additional help.
 
 * *iOSDefenderSDK* is a trademark of PreEmptive Solutions, LLC.
 * Xcode is a trademark of Apple Inc., registered in the U.S. and other countries.
