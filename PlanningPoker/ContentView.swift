@@ -83,11 +83,11 @@ struct ContentView: View {
     
     private func checkForJailbroken() {
         var state: String? = nil
-        if AppHost.isActivelyJailbroken() {
+        if iOSDefender.isActivelyJailbroken() {
             state = "Device is Actively Jailbroken, functionality is limited: only 3 different bids are available"
-        } else if AppHost.isJailbroken() {
+        } else if iOSDefender.isJailbroken() {
             state = "Device is Jailbroken, functionality is limited: only 5 different bids are available"
-        } else if AppHost.hasBeenJailbroken() {
+        } else if iOSDefender.hasBeenJailbroken() {
             state = "Device has been Jailbroken before, funtionality is limited: only 7 integer bids and infinity are available"
         }
         
@@ -110,11 +110,11 @@ struct ContentView: View {
     }
     
     private static func getOptions(_ array: Array<String>) -> Array<String> {
-        if AppHost.isActivelyJailbroken() {
+        if iOSDefender.isActivelyJailbroken() {
             return [] + array[1...3]
-        } else if AppHost.isJailbroken() {
+        } else if iOSDefender.isJailbroken() {
             return [] + array[0...4]
-        } else if AppHost.hasBeenJailbroken() {
+        } else if iOSDefender.hasBeenJailbroken() {
             return array[0...6] + [array[array.count - 2]]
         } else {
             return array
