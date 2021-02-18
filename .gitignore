@@ -1,5 +1,5 @@
 # Avoid committing user-specific Xcode project configuration
 xcuserdata/
 
-# The proprietary SDK will go in this directory ...
+# iOSDefender SDK will go in this directory ...
 /Frameworks/
