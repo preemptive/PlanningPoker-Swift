@@ -14,14 +14,14 @@ Cards for infinity and a question mark are also available, these are "to the rig
 
 ## Requirements
 
-* *iOSDefender SDK* (requires a license: please contact sales@preemptive.com for more information)
+* *iOSDefender SDK* (not included: please contact sales@preemptive.com for more information)
 * Xcode 11 or later
 * An iOS device with iOS 13.0 or later
 * Video conferencing software or a face mask (for showing your bids to your teammates)
 
 ## Setting Up
 
-Setting up this project is very easy:
+Setting up this project has only one step:
 
 1. Copy `iOSDefenderSDK.xcframework` from the *iOSDefender SDK* distribution to the `Frameworks/` directory.
 
